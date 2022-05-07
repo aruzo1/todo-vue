@@ -6,7 +6,7 @@ import TodosPending from "./components/TodosPending.vue";
 
 <template>
   <main
-    class="flex flex-col gap-y-4 w-[25rem] mt-16 mx-auto p-8 rounded-lg bg-white"
+    class="flex flex-col gap-y-4 w-[25rem] max-w-full mt-16 mx-auto p-8 rounded-lg bg-white"
   >
     <h1 class="text-3xl font-bold text-brand">Todo App</h1>
     <TodoForm />
