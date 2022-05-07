@@ -4,8 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .label {
+    @apply font-medium text-brand;
+  }
+  .input {
+    @apply px-4 outline-none border rounded-lg border-brand text-brand focus:border-brand-light transition-colors;
+  }
+  .btn {
+    @apply p-2 rounded-lg text-white bg-brand hover:bg-brand-light transition-colors;
+  }
+}
+
 @layer base {
   body {
     font-family: Montserrat, sans;
+    @apply bg-brand;
   }
 }
