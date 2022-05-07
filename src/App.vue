@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TodoForm from "./components/TodoForm.vue";
 import Todos from "./components/Todos.vue";
+import TodosPending from "./components/TodosPending.vue";
 </script>
 
 <template>
@@ -10,5 +11,6 @@ import Todos from "./components/Todos.vue";
     <h1 class="text-3xl font-bold text-brand">Todo App</h1>
     <TodoForm />
     <Todos />
+    <TodosPending />
   </main>
 </template>
