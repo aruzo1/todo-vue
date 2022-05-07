@@ -1,5 +1,5 @@
 
-# Todo App with vanilla Vue
+# Todo App with Vue
 
 ## Running the example
 
