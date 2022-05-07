@@ -1,10 +1,18 @@
 import { reactive } from "vue";
 
-export const store = reactive({
-  todos: [
-    { id: 1, body: "Buy Milk" },
-    { id: 2, body: "Buy Chesse" },
-  ],
+interface Todo {
+  id: number;
+  body: string;
+}
+
+interface Store {
+  todos: Todo[];
+  add(todo: Todo): void;
+  remove(id: number): void;
+}
+
+export const store = reactive<Store>({
+  todos: [],
   add(todo: { id: number; body: string }) {
     this.todos.unshift(todo);
   },
