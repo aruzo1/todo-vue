@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed } from "@vue/reactivity";
-import { store } from "@/store";
+import { useTodosStore } from "@/store/todos";
+
+const { todos } = useTodosStore();
 
 const msg = computed(() => {
-  return store.todos.length
-    ? `Pending todos: ${store.todos.length}`
-    : "No pending todos!";
+  return todos.length ? `Pending todos: ${todos.length}` : "No pending todos!";
 });
 </script>
 

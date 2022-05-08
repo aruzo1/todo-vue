@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { PlusIcon } from "@heroicons/vue/solid";
-import { store } from "@/store";
+import { useTodosStore } from "@/store/todos";
 
+const { create } = useTodosStore();
 const body = ref("");
 
 function submit() {
-  store.add({ id: Math.random(), body: body.value });
+  create({ id: Math.random(), body: body.value });
   body.value = "";
 }
 </script>
